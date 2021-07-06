@@ -1,0 +1,14 @@
+.parent,.child{
+  padding: 10px;
+  box-sizing: border-box;
+}
+.parent{
+  width: 100vw;
+  background-color: slategray;
+}
+.child{
+  width: 100%;
+  background-color: azure;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}

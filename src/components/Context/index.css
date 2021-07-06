@@ -1,0 +1,17 @@
+
+.parent{
+  width: 100vw;
+  background-color: teal;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.child{
+  width: 100%;
+  background-color: coral;
+  padding: 10px;
+}
+.grandson{
+  padding: 10px;
+  width: 100%;
+  background-color: thistle;
+}
