@@ -1,9 +1,12 @@
 // import React, { useState, useEffect } from 'react';
-import React, { PureComponent } from 'react'
+import React from 'react'
+import { BrowserRouter, Route, Link } from 'react-dom'
 // import Child from './components/Child'
 // import Context from './components/Context'
 // import Optimize from './components/Optimize'
 // import RenderProps from './components/RenderProps'
+// import Home from './components/Home';
+// import About from './components/About';
 import './App.css';
 
 // function App () {
@@ -33,15 +36,47 @@ import './App.css';
 // }
 // export default App;
 
-export default class App extends PureComponent {
+/* export default class App extends PureComponent {
   render () {
     return (
       <div className='App'>
-        {/* <Context/> */}
-        {/* <Optimize /> */}
-        {/* <RenderProps /> */}
+        <div className="row">
+          <div className="col-xs-offset-2 col-xs-8">
+            <div className="page-header"><h2>React Router Demo</h2></div>
+          </div>
+        </div>
       </div>
     )
   }
+} */
+
+function App () {
+  return (
+    <>
+      <div className="row">
+        <div className="col-xs-offset-2 col-xs-8">
+          <div className="page-header"><h2>React Router Demo</h2></div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-xs-2 col-xs-offset-2">
+          <div className="list-group">
+            <BrowserRouter>
+              <Link className="list-group-item active" to="/about">About</Link>
+              <Link className="list-group-item" to="/home">Home</Link>
+            </BrowserRouter>
+          </div>
+        </div>
+        <div className="col-xs-6">
+          <div className="panel">
+            <div className="panel-body">
+              <Route path="/about" component="{About}"></Route>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
 
+export default App
